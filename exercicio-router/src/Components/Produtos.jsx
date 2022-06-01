@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "./Produtos.module.css";
+import styles from "./Produtos.module.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -12,15 +12,13 @@ const Produtos = () => {
             .then((r) => r.json())
             .then((json) => setProdutos(json));
     }, []);
-    console.log(produtos);
     if (produtos === null) return null;
 
     return (
-        <section className="animeLeft" styles={{display:"grid",
-        gridTemplateColun:"1fr 1fr 1fr"}}>
-            <h2>Produtos</h2>
+        <section className={styles.produtos + " animeLeft"}>
             <Helmet>
                 <title>Loja CVL Developer | Produtos </title>
+                <meta name="Loja CVL Developer " description="Loja CVL Developer" />
             </Helmet>
             {produtos.map((produto) => (
                 <Link to={`produto/${produto.id}`} key={produto.id}>
@@ -28,7 +26,7 @@ const Produtos = () => {
                         src={produto.fotos[0].src}
                         alt={produto.fotos[0].titulo}
                     />
-                    <h3 className={Styles.nome}>{produto.nome}</h3>
+                    <h2 className={styles.nome}>{produto.nome}</h2>
                 </Link>
             ))}
         </section>

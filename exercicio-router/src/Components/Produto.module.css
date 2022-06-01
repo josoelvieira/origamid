@@ -1,0 +1,14 @@
+.produto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2rem;
+}
+.preco {
+    background: #eee;
+}
+.descricao {
+    background: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    border-radius: .5rem;
+}
