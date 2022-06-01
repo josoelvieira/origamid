@@ -9,6 +9,7 @@ const Contato = () => {
         <setcion className={`${Styles.contato} animeLeft`}>
           <Helmet>
             <title>Loja CVL Developer | Contato</title>
+            <meta name="Loja CVl Developer" descriptioon="Loja CVL Developer" />
         </Helmet>
             <img src={foto} alt="Maquina de escrever" />
             <div>
